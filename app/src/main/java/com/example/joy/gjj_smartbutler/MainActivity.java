@@ -1,5 +1,6 @@
 package com.example.joy.gjj_smartbutler;
 
+import android.os.Build;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -32,8 +33,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //去掉actionbar阴影
-        getSupportActionBar().setElevation(0);
+//        去掉actionbar阴影
+        if(Build.VERSION.SDK_INT>=21){
+            getSupportActionBar().setElevation(0);
+        }
+
 
         initData();
         initView();

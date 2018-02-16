@@ -1,6 +1,7 @@
 package com.example.joy.gjj_smartbutler.application;
 
 import android.app.Application;
+import android.content.Context;
 
 /**
  * Created by joy on 2018/2/14.
@@ -9,8 +10,16 @@ import android.app.Application;
  */
 
 public class BaseApplication extends Application {
+
+    public static Context mContext;
+
     @Override
     public void onCreate() {
         super.onCreate();
+        mContext = getApplicationContext();
+    }
+
+    public static Context getContext() {
+        return mContext;
     }
 }

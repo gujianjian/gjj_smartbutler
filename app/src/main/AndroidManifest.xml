@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.SplashActivity" android:theme="@style/NoActivityFullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,6 +20,12 @@
 
         <!---设置-->
         <activity android:name=".ui.SettingActivity" android:label="@string/string_setting"/>
+
+        <!--主页面-->
+        <activity android:name=".MainActivity"/>
+
+        <!--导航页-->
+        <activity android:name=".ui.GuideActivity"/>
     </application>
 
 </manifest>
